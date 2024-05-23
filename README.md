@@ -1,5 +1,5 @@
 # Linux
 ./run.sh arquivo
 
-# Windowns 
+# Windows 
 run.bat arquivo
