@@ -22,8 +22,8 @@ REM Define o diretório de saída para os arquivos compilados
 set "output_dir=bin"
 
 REM Compila o arquivo Java especificado
-echo Compilando %java_file%...
-javac -d "%output_dir%" "src\%java_file%"
+echo Compilando...
+javac -d "%output_dir%" "src\%java_file%.java"
 
 REM Verifica se a compilação foi bem-sucedida
 if %errorlevel% equ 0 (
