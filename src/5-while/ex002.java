@@ -50,27 +50,44 @@ public class ex002 {
         }
 
         Double averageAge = 0.0;
-        for(int i = 0; i < ageList.size(); i++){
-            averageAge += ageList.get(i);
-        }
-        averageAge /= ageList.size();
-        
         double averageFemaleAge = 0.0;
         int amountFemale = 0;
         double averageMaleAge = 0.0;
         int amountMale = 0;
+        double averageSalary = 0.0;
+        double averageFameleSalary = 0.0;
+        double averageMaleSalary = 0.0;
+        double highestSalary = 0.0;
+        double lowestSalary = 0.0;
         for(int i = 0; i < ageList.size(); i++){
+            averageAge += ageList.get(i);
+            averageSalary += salaryVerificationList.get(i);
+
+            if(salaryVerificationList.get(i) > highestSalary){
+                highestSalary = salaryVerificationList.get(i);
+            }
+            if(i == 0 || salaryVerificationList.get(i) < lowestSalary){
+                lowestSalary = salaryVerificationList.get(i);
+            }
+
             if(gender.get(i).equals("Feminino")){
                 averageFemaleAge += ageList.get(i);
                 amountFemale++;
+                averageFameleSalary += salaryVerificationList.get(i);
             }else{
                 averageMaleAge += ageList.get(i);
                 amountMale++;
+                averageMaleSalary += salaryVerificationList.get(i);
             }
         }
+
+        averageAge /= ageList.size();
         averageFemaleAge /= amountFemale;
         averageMaleAge /= amountMale;
-        JOptionPane.showMessageDialog(null,"Média de idade geral: "+ averageAge+"\nMédia de idade feminina: "+ averageFemaleAge+"\nMédia de idade masculina: "+ averageMaleAge);
+        averageSalary /= salaryVerificationList.size();
+        averageFameleSalary /= amountFemale;
+        averageMaleSalary /= amountMale;
+        JOptionPane.showMessageDialog(null,"Média de idade geral: "+ averageAge+"\nMédia de idade feminina: "+ averageFemaleAge+"\nMédia de idade masculina: "+ averageMaleAge + "\nMédia de salário geral: "+ averageSalary + "\nMédia de salário feminina: "+ averageFameleSalary + "\nMédia de salário masculino: "+ averageMaleSalary + "\nMaior salário: "+ highestSalary + "\nMenor salário: "+ lowestSalary);
 
     }
 }
