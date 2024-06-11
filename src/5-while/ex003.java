@@ -6,6 +6,8 @@ import javax.swing.JTextField;
 import javax.swing.JLabel;
 
 import java.awt.GridLayout;
+
+import java.text.DecimalFormat;
 public class ex003 {
     public static void main(String[] args) {
         ArrayList<String> nameList = new ArrayList<String>();
@@ -53,6 +55,10 @@ public class ex003 {
         double averageChildren = 0.0;
         double higherSalary = 0.0;
         ArrayList<String> nameListLowerSalary = new ArrayList<String>(nameList);
+
+        DecimalFormat df = new DecimalFormat();
+        df.applyPattern("R$ #,##0.00");
+
         for(int i = 0; i < nameList.size(); i++){
             averageSalary += salaryList.get(i);
             averageAge += ageList.get(i);
@@ -67,6 +73,6 @@ public class ex003 {
         averageSalary = averageSalary / nameList.size();
         averageAge = averageAge / nameList.size();
         averageChildren = averageChildren / nameList.size();
-        JOptionPane.showMessageDialog(null, "Média de salários: " + averageSalary + "\nMédia de idades: " + averageAge + "\nMédia de filhos: " + averageChildren + "\nMaior salário: " + higherSalary);
+        JOptionPane.showMessageDialog(null, "Média de salários: " + df.format(averageSalary) + "\nMédia de idades: " + averageAge + "\nMédia de filhos: " + averageChildren + "\nMaior salário: " + df.format(higherSalary));
     }
 }

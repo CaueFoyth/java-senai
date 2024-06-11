@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JCheckBox;
+
+import java.text.DecimalFormat;
 public class ex002 {
     public static void main(String[] args) {
 
@@ -59,6 +61,9 @@ public class ex002 {
         double averageMaleSalary = 0.0;
         double highestSalary = 0.0;
         double lowestSalary = 0.0;
+
+        DecimalFormat df = new DecimalFormat();
+        df.applyPattern("R$ #,##0.00");
         for(int i = 0; i < ageList.size(); i++){
             averageAge += ageList.get(i);
             averageSalary += salaryVerificationList.get(i);
@@ -87,7 +92,7 @@ public class ex002 {
         averageSalary /= salaryVerificationList.size();
         averageFameleSalary /= amountFemale;
         averageMaleSalary /= amountMale;
-        JOptionPane.showMessageDialog(null,"Média de idade geral: "+ averageAge+"\nMédia de idade feminina: "+ averageFemaleAge+"\nMédia de idade masculina: "+ averageMaleAge + "\nMédia de salário geral: "+ averageSalary + "\nMédia de salário feminina: "+ averageFameleSalary + "\nMédia de salário masculino: "+ averageMaleSalary + "\nMaior salário: "+ highestSalary + "\nMenor salário: "+ lowestSalary);
+        JOptionPane.showMessageDialog(null,"Média de idade geral: "+ averageAge+"\nMédia de idade feminina: "+ averageFemaleAge+"\nMédia de idade masculina: "+ averageMaleAge + "\nMédia de salário geral: "+ df.format(averageSalary) + "\nMédia de salário feminina: "+ df.format(averageFameleSalary) + "\nMédia de salário masculino: "+ df.format(averageMaleSalary) + "\nMaior salário: "+ df.format(highestSalary) + "\nMenor salário: "+ lowestSalary);
 
     }
 }
