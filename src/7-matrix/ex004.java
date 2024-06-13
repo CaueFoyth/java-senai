@@ -6,6 +6,8 @@ public class ex004 {
     public static void main(String[] args) {
         int[][] matrix = new int[4][4];
 
+        JOptionPane.showMessageDialog(null, "Programa para saber o resto da divisão da diagonal principal e o produto da diagonal secundária de uma matriz 4x4", "Programa de matriz", JOptionPane.INFORMATION_MESSAGE);
+
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 matrix[i][j] = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite um valor para " + (j+1) + "° coluna da " + (i+1) + "° linha: ", "Entrada de dados", JOptionPane.QUESTION_MESSAGE));
