@@ -2,6 +2,8 @@ import javax.swing.JOptionPane;
 
 public class ex002 {
     public static void main(String[] args) {
+
+        JOptionPane.showMessageDialog(null, "Programa para aplicar uma máscara ao número de telefone", "Programa de telefone", JOptionPane.INFORMATION_MESSAGE);
         String phoneNumber = JOptionPane.showInputDialog(null, "Digite seu telefone: ", "Entrada de dados", JOptionPane.QUESTION_MESSAGE);
         
         String result = regex(phoneNumber);

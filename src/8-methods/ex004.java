@@ -11,6 +11,8 @@ public class ex004 {
             result = raffle(number, raffleNumber);
             if(result) {
                 break;
+            }else{
+                JOptionPane.showMessageDialog(null, "Tente novamente!", "Jogo", JOptionPane.INFORMATION_MESSAGE);
             }
         }
         if(result){

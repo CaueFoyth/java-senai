@@ -7,8 +7,9 @@ public class ex001 {
         int[] numbers = new int[10];
         int secondHighest = 0;
         int thirdLowest = 0;
+        JOptionPane.showMessageDialog(null, "Programa para saber o segundo maior e o terceiro menor valor de um array", "Programa de array", JOptionPane.INFORMATION_MESSAGE);
         for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite um valor: ", "Entrada de dados", JOptionPane.QUESTION_MESSAGE));
+            numbers[i] = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o " + (i + 1) + "° valor: ", "Entrada de dados", JOptionPane.QUESTION_MESSAGE));
         }
 
         Arrays.sort(numbers);

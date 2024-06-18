@@ -2,6 +2,7 @@ import javax.swing.JOptionPane;
 
 public class ex001 {
     public static void main(String[] args) {
+        JOptionPane.showMessageDialog(null, "Programa para saber se o aluno foi aprovado, em recuperação ou reprovado", "Programa de notas", JOptionPane.INFORMATION_MESSAGE);
         int number = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite uma nota de 0 a 10: ", "Entrada de nota", JOptionPane.QUESTION_MESSAGE));
         while(number < 0 || number > 10) {
             number = Integer.parseInt(JOptionPane.showInputDialog(null, "Nota inválida. Digite novamente: ", "Entrada de nota", JOptionPane.QUESTION_MESSAGE));
