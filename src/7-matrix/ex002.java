@@ -8,7 +8,7 @@ public class ex002 {
         int[][] matrixB = new int[4][4];
         int amountEquals = 0;
 
-        JOptionPane.showMessageDialog(null, "Programa para saber a quantidade de elementos iguais entre as duas matrizes 4x4", "Programa de matriz", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Programa para saber a quantidade de elementos iguais entre as duas matrizes 4x4 de inteiros", "Programa de matriz de inteiros", JOptionPane.INFORMATION_MESSAGE);
         matrixA = intsertMatrix(matrixA);
         matrixB = intsertMatrix(matrixB);   
         for (int i = 0; i < 4; i++) {
@@ -19,7 +19,7 @@ public class ex002 {
             }
         }
         
-        JOptionPane.showMessageDialog(null, "A quantidade de elementos iguais entre as duas matrizes é: " + amountEquals, "Quantidade de elementos iguais", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "A quantidade de elementos iguais entre as duas matrizes é: " + amountEquals, "Quantidade de elementos iguais de matriz de inteiros", JOptionPane.INFORMATION_MESSAGE);
     }
 
     public static int[][] intsertMatrix(int[][] matrix) {
@@ -33,7 +33,7 @@ public class ex002 {
                 panel.add(fields[i][j]);
             }
         }
-        if (JOptionPane.showConfirmDialog(null, panel, "Insira a Matriz", JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION) {
+        if (JOptionPane.showConfirmDialog(null, panel, "Insira a Matriz de matriz de inteiros", JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION) {
             for (int i = 0; i < 4; i++) {
                 for (int j = 0; j < 4; j++) {
                     matrix[i][j] = Integer.parseInt(fields[i][j].getText());

@@ -12,6 +12,6 @@ public class ex001 {
             }
         }
 
-        JOptionPane.showMessageDialog(null,"Soma da primeira linha: " + sumLine[0]+ "Soma da segunda linha: "+ sumLine[1] + "\nSoma da terceira linha: " + sumLine[2] + "\nSoma da quarta linha: " + sumLine[3]+"\nSoma da matriz: " + (sumLine[0] + sumLine[1] + sumLine[2] + sumLine[3]),"Somas da matriz", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null,"Soma da primeira linha: " + sumLine[0]+ "\nSoma da segunda linha: "+ sumLine[1] + "\nSoma da terceira linha: " + sumLine[2] + "\nSoma da quarta linha: " + sumLine[3]+"\nSoma da matriz: " + (sumLine[0] + sumLine[1] + sumLine[2] + sumLine[3]),"Somas da matriz", JOptionPane.INFORMATION_MESSAGE);
     }
 }
